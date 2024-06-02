@@ -1,0 +1,28 @@
+@import '../../../mixin.scss';
+@import '../../../styles.scss';
+
+
+header {
+    padding: 37px 100px 37px 100px;
+    height: 109.03px;
+    width: 100%;
+    @include dFlex($jc: space-between);
+        img {
+            height: 38.03px;
+            width: 150px;
+        }
+        menu {
+            @include dFlex($jc: space-between,$ai: flex-start, $g: 29px);
+            width: 324x;
+            height: 32px;
+            a {
+                color: whitesmoke;
+                text-decoration: none;
+                font-size: 23px;
+                transition: color 0.3s ease-out;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+}
