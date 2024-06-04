@@ -5,8 +5,8 @@
     gap: $g;
 }
 
-@mixin line($lw: 0px) {
+@mixin line($lw: 0px, $bc) {
     width: $lw;
     height: 4px;
-    background-color:  #4B47FF;
+    background-color: $bc;
 }

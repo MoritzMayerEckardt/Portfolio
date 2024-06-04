@@ -1,49 +1,24 @@
 @import '../../mixin.scss';
 
-.position-wrapper {
+.hero-page-main-content {
     width: 100%;
-    height: 100%;
-}
-
-.img-profile {
-    position: absolute;
-    top: 124px;
-    left: 47px;
-    width: auto;
-    height: 640px;
-}
-
-.img-shadow-blue {
-    position: absolute;
-    top: 181.62px;
-    left: 40px;
-    width: 790.7px;
-    height: 721.38px;
-    z-index: -1;
-}
-
-.img-shadow-purple {
-    position: absolute;
-    top: 181.62px;
-    left: -160px;
-    width: 790.7px;
-    height: 721.38px;
-    z-index: -1;
-}
-
-.img-seperator {
-    position: absolute;
-    top: 256px;
-    left: 0;
-    width: 100%;
+    max-width: 1920px;
+    padding: 0px 100px 0px 100px;
+    @include dFlex($ai: flex-start, $jc: space-between);
+    .hero-page-text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 920px;
+        height: auto;
+        gap: 40px;
+        padding-top: 136px;
+    }
 }
 
 .headline-container {
     width: auto;
     height: 172px;
-    position: absolute;
-    top: 297px;
-    right: 184px;
     @include dFlex();
         span {
             transform: rotate(-90deg);
@@ -55,13 +30,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            h1 {
-                font-weight: 700;
-                font-size: 68px;
-                margin-block-start: 0px;
-                margin-block-end: 0px;
-                line-height: 108px;
-            }
             h2 {
                 color: #4B47FF;
                 font-size: 56px;
@@ -70,4 +38,38 @@
                 margin-block-end: 0px;
             }
         }
+}
+
+.position-wrapper-images {
+    position: relative;
+    .img-profile {
+        width: auto;
+        height: 720px;
+        margin-top: -20px;
+        margin-left: -48px;
+    }
+    .img-shadow-blue {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 790.7px;
+        height: 721.38px;
+        z-index: -1;
+    }
+    .img-shadow-purple {
+        position: absolute;
+        top: 0px;
+        left: -160px;
+        width: 790.7px;
+        height: 721.38px;
+        z-index: -1;
+        transform: rotate(180deg);
+    }
+}
+
+.img-seperator {
+    position: absolute;
+    top: 264px;
+    width: 100%;
+    max-width: 1920px;
 }

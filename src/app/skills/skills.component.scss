@@ -1,0 +1,64 @@
+@import '../../mixin.scss';
+@import '../../styles.scss';
+
+.skills-content {
+    @include dFlex($g: 54px, $jc: space-between);
+    flex-direction: column;
+    width: 721px;
+    height: 414.41px;
+        .row {
+            @include dFlex($g:123px, $jc: flex-start);
+            width: 100%;
+        }
+            .skills {
+                @include dFlex($g: 10px);
+                flex-direction: column;
+                text-align: center;
+                width: 88px;
+                height: 100px;
+            }
+}
+
+.skills-text {
+    width: 471px;
+    height: 180px;
+    @include dFlex($g: 57px, $jc: flex-start);
+    flex-direction: column;
+    gap: 57px;
+        .skills-description {
+            @include dFlex($g:34px, $ai: flex-end);
+            flex-direction: column;
+            text-align: right;
+        }
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.line {
+    @include line($lw: 58px, $bc: $purple);
+    margin-right: -100px;
+}
+
+.skills-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 278px;
+    width: 100%;
+    max-width: 1920px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.shadow {
+    transform: rotate(240deg);
+    position: absolute;
+    z-index: -1;
+    left: -160px;
+    top: 320px;
+    height: 640px;
+}

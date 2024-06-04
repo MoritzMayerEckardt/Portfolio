@@ -6,6 +6,7 @@ header {
     padding: 37px 100px 37px 100px;
     height: 109.03px;
     width: 100%;
+    max-width: 1920px;
     @include dFlex($jc: space-between);
         img {
             height: 38.03px;

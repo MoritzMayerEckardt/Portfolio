@@ -1,0 +1,45 @@
+@import '../../mixin.scss';
+@import '../../styles.scss';
+
+.about-container {
+   @include dFlex($g: 80px, $jc: space-between);
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    padding: 178px 0px 0px 100px;
+        .img-container {
+            display: flex;
+            align-items: center;
+        }
+        .frame-profile {
+            width: 453px;
+            height: 453px;
+            border-radius: 100%;
+            border: 4px solid $blue;
+        }
+        .img-profile {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+        .line {
+            @include line($lw: 267px, $bc: $blue);
+        }
+}
+
+.about-content {
+    @include dFlex($g: 35px);
+    flex-direction: column;
+    width: 471px;
+        div {
+            @include dFlex($g: 35px, $ai: flex-start);
+            padding-left: 40px;
+        }
+}
+
+.shadow {
+    position: absolute;
+    height: 500px;
+    right: 0px;
+    top: -40px;
+}
