@@ -1,9 +1,8 @@
 @import '../../mixin.scss';
-
-.hero-page-main-content {
+section {
     width: 100%;
     max-width: 1920px;
-    padding: 0px 100px 0px 100px;
+    padding: 109.03px 100px 0px 100px;
     @include dFlex($ai: flex-start, $jc: space-between);
     .hero-page-text-content {
         display: flex;

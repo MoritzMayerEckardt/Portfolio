@@ -1,6 +1,6 @@
 <div class="position-wrapper">
     <div class="skills-container">
-        <div class="skills-content">
+        <div class="skills-content" data-aos="zoom-in">
             <div class="row">
                 <div class="skills" *ngFor="let skill of skills | slice:0:4">
                     <img [src]="skill.img" alt="">
@@ -20,15 +20,15 @@
                 </div>
             </div>
         </div>
-        <div class="skills-text">
+        <div class="skills-text" data-aos="fade-left">
             <div class="skills-description">
                 <div class="headline">
                     <h1>My skills</h1>
                     <div class="line"></div>
                 </div>
-                <span>I have grown my frontend developments skills that have allowed me to create different real projects.</span>
+                <span>As a frontend developer, I bring extensive knowledge in multiple skills, which I have acquired through the successful implementation of various individual and group projects.</span>
             </div>
-            <button class="btn-blue"><span>Let's talk</span></button>
+            <a class="btn-blue-large" href="#contact"><span>Get in touch</span></a>
         </div>
         <img class="shadow" src="../../assets/img/blue_3.png" alt="">
     </div>

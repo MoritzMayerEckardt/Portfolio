@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SkillsDataService } from '../shared/components/skillsdata.service';
 import { CommonModule } from '@angular/common';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-skills',
@@ -19,6 +20,6 @@ export class SkillsComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    
+    AOS.init();
   }
 }

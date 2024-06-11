@@ -12,6 +12,7 @@
         div {
             @include dFlex($g: 42px);
             a {
+                transition: transform 0.25s ease-in-out;
                 width: 30px;
                 &:hover {
                     transform: scale(1.2);
@@ -24,11 +25,11 @@
 .link-email {
     color: white;
     text-decoration: none;
-    transition: color 0.2s ease-out;
+    transition: color 0.25s ease-in-out !important;
     font-size: 23px;
     &:hover {
-        transform: scale(1.0) !important;
         color: $blue;
+        transform: scale(1.0) !important;
     }
 }
 
@@ -41,13 +42,29 @@
     display: flex;
     flex-direction: column;
     gap: 3px;
+    animation: moveUpDown 2s ease-in-out infinite;
         span {
             transform: rotate(90deg);
             font-size: 23px;
             width: 176px;
             margin-top: -40px;
+            &:hover {
+                cursor: default;
+            }
         }
         img {
             height: 16px;
         }
 }
+
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(-50px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-50px);
+    }
+  }

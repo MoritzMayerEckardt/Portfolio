@@ -1,0 +1,48 @@
+@import '../../mixin.scss';
+@import '../../styles.scss';
+
+.line {
+    @include line($lw: 50px, $bc: $purple)
+}
+
+section {
+    width: 100%;
+    max-width: 1920px;
+    padding: 160px 100px 400px 0px;
+    .headline {
+        width: 100%;
+        @include dFlex($jc: flex-start, $g: 42px)
+    }
+    .contact-content {
+        width: 100%;
+        padding: 0px 100px 0px 100px;
+        @include dFlex($g: 120px, $jc: space-between, $ai: flex-start); 
+        .description {
+            @include dFlex($ai: flex-start);
+            flex-direction: column;
+            width: 473px;
+        }
+    }
+}
+
+.bottom-container {
+    height: 122px;
+    @include dFlex($g: 12px);
+    flex-direction: column;
+    .privacy-policy {
+        @include dFlex($g: 8px, $ai: flex-start);
+        height: 52px;
+    }
+    .btn-blue {
+        width: 253px;
+        &:hover {
+            background-color: $purple;
+            cursor: pointer;
+            animation: hoverAnimationBtnSendMessage 0.2s forwards;
+        }
+    }
+}   
+
+input:focus {
+    border-color: $blue;
+}

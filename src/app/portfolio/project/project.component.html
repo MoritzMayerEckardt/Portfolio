@@ -1,0 +1,20 @@
+<section>
+    <div class="project" *ngFor="let project of projects let i = index" 
+    [ngClass]="{'special-description': i === 1}"
+    data-aos="fade-up">
+        <div class="img-container">
+            <img [src]="project.img" alt="">
+        </div>
+        <div class="description">
+            <div>
+                <h2>{{project.name}}</h2>
+                <h3>{{project.skills}}</h3>
+                <span>{{project.description}}</span>
+            </div>
+            <div>
+                <a href=""><span>Live test</span></a>
+                <a href=""><span>Github</span></a>
+            </div>
+        </div>
+    </div>
+</section>

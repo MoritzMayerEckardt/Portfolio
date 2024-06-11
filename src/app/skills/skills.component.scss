@@ -16,12 +16,17 @@
                 text-align: center;
                 width: 88px;
                 height: 100px;
+                &:nth-child(even):hover {
+                    animation: moveUpAndDown 0.9s ease-in-out;
+                }
+                &:nth-child(odd):hover {
+                    animation: moveUpAndDown 0.9s ease-in-out;
+                }
             }
 }
 
 .skills-text {
-    width: 471px;
-    height: 180px;
+    width: 480px;
     @include dFlex($g: 57px, $jc: flex-start);
     flex-direction: column;
     gap: 57px;
@@ -59,6 +64,27 @@
     position: absolute;
     z-index: -1;
     left: -160px;
-    top: 320px;
-    height: 640px;
+    top: 240px;
+    height: 960px;
+}
+
+@keyframes moveUpAndDown {
+    0% {
+        transform: scale(1) translateY(0px);
+    }
+    50% {
+        transform: scale(1.1) translateY(-16px);
+    }
+    100% {
+        transform: scale(1) translateY(0px);
+    }
+}
+
+@keyframes moveAndTurnLeft {
+    0% {
+        transform: scale(1) rotate(0);
+    }
+    100% {
+        transform: scale(1.1) rotate(15deg);
+    }
 }

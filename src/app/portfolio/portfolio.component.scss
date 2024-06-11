@@ -1,0 +1,51 @@
+@import '../../mixin.scss';
+@import '../../styles.scss';
+
+section {
+    padding: 178px 0px 0px 100px;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    .headline {
+        width: 100%;
+        @include dFlex($jc: space-between, $g: 42px);
+    }
+    .line-position-wrapper {
+        @include line ($lw: 15%, $bc: $dark-blue);
+        z-index: -2;
+    }
+    .line-long {
+        @include line($lw: 50%, $bc: $purple);
+    }
+    .line-short {
+        @include line($lw: 35%, $bc: $purple);
+        z-index: -2;
+    }
+    .description {
+        @include dFlex();
+    }
+    .projects {
+        @include dFlex($g: 200px);
+        margin-top: 160px;
+            app-project {
+                display: flex;
+                flex-direction: column;
+                gap: 160px;
+                width: 100%;
+            }
+            app-project:nth-of-type(2) {
+                display: flex;
+                flex-direction: column-reverse;
+                width: 100%;
+            }
+    }
+}
+
+.shadow {
+    position: absolute;
+    right: 0;
+    top: 800px;
+    height: 1120px;
+    z-index: -1;
+}
+
